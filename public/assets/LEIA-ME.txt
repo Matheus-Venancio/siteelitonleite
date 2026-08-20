@@ -1,0 +1,39 @@
+ESTA PASTA E GERADA AUTOMATICAMENTE.
+
+NAO edite as imagens aqui na mao. Faca assim:
+
+1) Coloque os arquivos ORIGINAIS (com o fundo verde / fundo do logo mesmo)
+   na pasta  fotos-originais/  da raiz do projeto, com estes nomes:
+
+     logo-branco.jpg   -> logo de letras BRANCAS (a que esta sobre fundo azul)
+     logo-azul.jpg     -> logo de letras AZUIS  (a que esta sobre fundo branco)
+     foto-hero.jpg     -> foto principal do topo (de corpo/meio corpo, em pe)
+     foto-sobre.jpg    -> foto da secao "O Candidato"
+     foto-1.jpg
+     foto-2.jpg
+     foto-3.jpg
+     foto-4.jpg
+     foto-5.jpg
+
+   A extensao pode ser .jpg, .jpeg, .png ou .webp — o que importa e o NOME.
+
+2) Rode na raiz do projeto:
+
+     npm run imagens
+
+   O script remove o fundo verde (chroma key) e o fundo solido dos logos,
+   corta as sobras transparentes e grava tudo aqui como .png.
+
+3) Confira o resultado com  npm run dev.
+
+SE ALGO SAIR ERRADO
+- "NADA foi removido"      -> aumente "tolerancia" em scripts/preparar-imagens.mjs
+- "removeu quase tudo"     -> diminua "tolerancia"
+- sobrou borda verde       -> aumente "suavizacao"
+- comeu pedaco da pessoa   -> diminua "tolerancia" e/ou "suavizacao"
+
+Os ajustes ficam no topo de scripts/preparar-imagens.mjs, em PADRAO e AJUSTES
+(da para ajustar arquivo por arquivo).
+
+Enquanto um arquivo nao existir, o site mostra um bloco em degrade no lugar —
+nunca aparece imagem quebrada.

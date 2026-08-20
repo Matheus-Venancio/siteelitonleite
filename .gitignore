@@ -1,0 +1,8 @@
+node_modules
+dist
+.vercel
+.DS_Store
+*.local
+
+# originais das fotos (nao vao para o deploy)
+fotos-originais
