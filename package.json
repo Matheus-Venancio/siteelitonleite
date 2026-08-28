@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "imagens": "node scripts/preparar-imagens.mjs"
+    "imagens": "node scripts/preparar-imagens.mjs",
+    "avatar": "node scripts/gerar-avatar.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

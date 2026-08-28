@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import SmartImage from './SmartImage'
 import { Check, Arrow, Whats, iconMap } from './Icons'
-import { CANDIDATO, CONTATO, REDES, BANDEIRAS, PROPOSTAS, GALERIA, FOTOS } from '../site.config'
+import { CANDIDATO, CONTATO, REDES, BANDEIRAS, PROPOSTAS, GALERIA, FOTOS, LEGAL } from '../site.config'
 
 /* ---------------------------------------------------------- FAIXA */
 export function Faixa() {
@@ -326,11 +326,7 @@ export function Footer({ zapLink }) {
 
         <div className="footer__legal">
           <span>© {ano} Eliton Leite {CANDIDATO.numero}. Todos os direitos reservados.</span>
-          <span>
-            {CANDIDATO.cnpj
-              ? `Propaganda eleitoral · CNPJ ${CANDIDATO.cnpj}`
-              : 'Propaganda eleitoral · informe o CNPJ de campanha em src/site.config.js'}
-          </span>
+          <span>Pago por {LEGAL.registro} — CNPJ {LEGAL.cnpj}</span>
         </div>
       </div>
     </footer>

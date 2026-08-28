@@ -92,6 +92,35 @@ Tudo fica em **um arquivo só**: `src/site.config.js`.
 
 Os textos das bandeiras e propostas também estão nesse arquivo.
 
+## 2.4 Página de links (o "linktree")
+
+Fica em **`/links`** e usa os mesmos dados de `site.config.js` — botão que não
+tiver URL preenchida em `REDES` simplesmente não aparece.
+
+```js
+export const PAGINA_LINKS = {
+  subtitulo: 'Conecte-se comigo!',
+  avatar: '/assets/avatar.png',
+  ordem: ['Instagram', 'whatsapp', 'site', 'Facebook', 'YouTube', 'TikTok']
+}
+```
+
+`whatsapp` e `site` são montados sozinhos; os outros nomes vêm da lista `REDES`.
+Para reordenar ou tirar um botão, mexa só no `ordem`.
+
+O avatar é gerado a partir da foto do topo:
+
+```bash
+node scripts/gerar-avatar.mjs
+```
+
+### Subdomínio
+
+A página também abre na **raiz de qualquer subdomínio que comece com `links.`**
+— por exemplo `links.elitonleite.com.br`. Não precisa de rewrite nem de outro
+projeto: na Vercel, em *Settings → Domains*, adicione o subdomínio a **este mesmo
+projeto** e pronto.
+
 ## 3. Publicar na Vercel
 
 ### Opção A — pelo site da Vercel (recomendado)

@@ -10,9 +10,22 @@ export const CANDIDATO = {
   estado: 'São Paulo',
   slogan: 'Coragem para mudar o Brasil',
   // Preencha quando definido:
-  partido: 'PODEMOS', // ex.: 'PL' — deixe vazio para ocultar
-  cnpj: '68.491.987/0001-28',    // CNPJ de campanha (obrigatorio no rodape pela Lei 9.504/97)
-  responsavel: '' // Nome/CNPJ do responsavel pela veiculacao
+  partido: 'PODEMOS' // ex.: 'PL' — deixe vazio para ocultar
+}
+
+// Dados obrigatorios no rodape pela Lei 9.504/97
+export const LEGAL = {
+  registro: 'ELEIÇÃO 2026 ELITON SOUSA LEITE DEPUTADO FEDERAL',
+  cnpj: '68.491.987/0001-28'
+}
+
+// Pagina de links da campanha — fica em /links
+export const PAGINA_LINKS = {
+  subtitulo: 'Conecte-se comigo!',
+  avatar: '/assets/avatar.png', // recorte quadrado do rosto (gerado a partir da foto-hero)
+  // Ordem dos botoes. 'whatsapp' e 'site' sao montados automaticamente;
+  // os demais nomes vem da lista REDES abaixo. Rede sem URL nao aparece.
+  ordem: ['Instagram', 'whatsapp', 'site', 'Facebook', 'YouTube', 'TikTok']
 }
 
 export const CONTATO = {
