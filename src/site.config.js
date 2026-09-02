@@ -37,10 +37,10 @@ export const CONTATO = {
 }
 
 export const REDES = [
-  { nome: 'Instagram', url: 'https://instagram.com/elitonleite', icone: 'instagram' },
-  { nome: 'Facebook',  url: 'https://facebook.com/elitonleite',  icone: 'facebook'  },
-  { nome: 'YouTube',   url: 'https://youtube.com/@elitonleite',  icone: 'youtube'   },
-  { nome: 'TikTok',    url: 'https://tiktok.com/@elitonleite',   icone: 'tiktok'    }
+  { nome: 'Instagram', url: 'https://www.instagram.com/comendador_elitonleite/', icone: 'instagram' },
+  { nome: 'Facebook',  url: 'https://www.facebook.com/eliton.leite.56/?locale=pt_BR',  icone: 'facebook'  },
+  { nome: 'YouTube',   url: 'https://www.youtube.com/channel/UCRYiVIuuok9iV06DEXcgIWg',  icone: 'youtube'   },
+  { nome: 'TikTok',    url: 'https://www.tiktok.com/@eliton.leite43',   icone: 'tiktok'    }
 ]
 
 export const BANDEIRAS = [
