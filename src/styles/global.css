@@ -528,3 +528,101 @@ ul{margin:0;padding:0;list-style:none}
   .links-nome{font-size:1.8rem}
   .link-botao{padding:16px 50px;font-size:.96rem}
 }
+
+/* =========================================================
+   CHAMADA DA MOLDURA NA HOME
+   ========================================================= */
+.moldura-cta{position:relative;overflow:hidden;
+  background:linear-gradient(125deg,var(--azul-escuro) 0%,var(--azul) 55%,var(--verde) 100%);color:#fff}
+.moldura-cta::before{content:"";position:absolute;inset:0;opacity:.07;
+  background-image:repeating-linear-gradient(115deg,#fff 0 2px,transparent 2px 26px)}
+.moldura-cta__inner{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;
+  gap:48px;align-items:center}
+.moldura-cta__texto .h-sec{color:#fff}
+.moldura-cta__texto .btn{margin-top:26px}
+.moldura-cta__arte{display:flex;justify-content:center}
+.moldura-cta__arte img{width:100%;max-width:340px;border-radius:18px;
+  box-shadow:0 26px 60px rgba(0,0,0,.42);background:#fff;transform:rotate(-2.5deg)}
+@media (max-width:860px){
+  .moldura-cta__inner{grid-template-columns:1fr;gap:36px}
+  .moldura-cta__arte{order:-1}
+  .moldura-cta__arte img{max-width:260px}
+}
+
+/* =========================================================
+   PAGINA /moldura
+   ========================================================= */
+.pagina-moldura{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--cinza)}
+.pagina-moldura .header{position:sticky}
+.moldura__main{flex:1;padding-top:118px}
+.moldura__head{max-width:720px;margin:0 auto 40px;text-align:center}
+.moldura__head .eyebrow{justify-content:center}
+.moldura__titulo{font-size:clamp(2rem,5vw,3.1rem);color:var(--azul)}
+.moldura__lead{margin:0 auto}
+
+.moldura__passos{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}
+.moldura__passos li{display:flex;align-items:center;gap:10px;padding:9px 18px 9px 9px;
+  background:#fff;border:1px solid var(--cinza-2);border-radius:999px;
+  font-size:.88rem;font-weight:600;color:var(--texto)}
+.moldura__passos b{width:26px;height:26px;border-radius:50%;background:var(--verde);color:#fff;
+  display:grid;place-items:center;font-size:.82rem;flex:none}
+
+.moldura__privacidade{max-width:640px;margin:34px auto 0;text-align:center;
+  font-size:.86rem;line-height:1.65;color:var(--texto-suave)}
+.moldura__privacidade strong{color:var(--azul)}
+
+.moldura__rodape{margin-top:auto;padding:34px 0 26px}
+.moldura__social{justify-content:center;margin:0 0 18px}
+.moldura__legal{text-align:center;font-size:.76rem;line-height:1.5;
+  color:rgba(255,255,255,.5);margin:0}
+
+/* =========================================================
+   GERADOR DE MOLDURA
+   ========================================================= */
+.gerador{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;
+  max-width:940px;margin:0 auto;background:#fff;border:1px solid var(--cinza-2);
+  border-radius:22px;padding:26px;box-shadow:var(--shadow)}
+
+.gerador__previa{display:flex;flex-direction:column;align-items:center;gap:10px}
+.gerador__tela{width:100%;max-width:420px;height:auto;display:block;border-radius:14px;
+  background:#eef1f7;box-shadow:var(--shadow-sm);
+  touch-action:none;              /* sem isso o arrasto rola a pagina no celular */
+  -webkit-user-select:none;user-select:none;-webkit-user-drag:none}
+.gerador__tela--arrastavel{cursor:grab}
+.gerador__tela--arrastavel:active{cursor:grabbing}
+.gerador__dica{margin:0;font-size:.8rem;color:var(--texto-suave)}
+
+.gerador__controles{display:flex;flex-direction:column;gap:20px}
+.gerador__campo{display:flex;flex-direction:column;gap:10px}
+.gerador__rotulo{font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--texto-suave)}
+.gerador__opcoes{display:flex;flex-wrap:wrap;gap:9px}
+.gerador__chip{padding:11px 18px;border-radius:999px;background:var(--cinza);
+  border:2px solid transparent;color:var(--azul);font-weight:700;font-size:.88rem;
+  transition:background .18s ease,color .18s ease,border-color .18s ease,transform .18s ease}
+.gerador__chip:hover{transform:translateY(-2px);border-color:var(--cinza-2)}
+.gerador__chip--ativo{background:var(--verde);color:#fff;border-color:transparent}
+.gerador__chip--ativo:hover{border-color:transparent}
+
+.gerador__escolher{width:100%;cursor:pointer}
+
+.gerador__zoom{display:flex;align-items:center;gap:14px;font-size:.82rem;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--texto-suave)}
+.gerador__zoom input{flex:1;accent-color:var(--verde)}
+
+.gerador__acoes{display:flex;flex-wrap:wrap;gap:12px}
+.gerador__acoes .btn{flex:1;min-width:170px}
+.gerador__acoes .btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+
+.gerador__erro{margin:0;font-size:.85rem;font-weight:600;color:#b3261e}
+.gerador__nota{margin:0;font-size:.78rem;line-height:1.6;color:var(--texto-suave)}
+
+@media (max-width:860px){
+  .gerador{grid-template-columns:1fr;gap:26px;padding:20px}
+  .moldura__main{padding-top:104px}
+}
+@media (max-width:420px){
+  .gerador{padding:16px;border-radius:18px}
+  .gerador__acoes .btn{min-width:0;width:100%}
+  .gerador__chip{padding:10px 15px;font-size:.84rem}
+}

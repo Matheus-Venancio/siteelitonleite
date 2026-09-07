@@ -19,6 +19,24 @@ export const LEGAL = {
   cnpj: '68.491.987/0001-28'
 }
 
+// ------------------------------------------------------------------
+// GERADOR DE MOLDURA — pagina /moldura
+// As artes ficam em /public/moldura com o nome <modelo>-<formato>.png
+// e a area da foto PRECISA ser transparente. Veja o LEIA-ME de la.
+// Para adicionar um modelo: solte o arquivo na pasta e acrescente uma
+// linha em "modelos". Nenhuma outra mudanca e necessaria.
+// ------------------------------------------------------------------
+export const MOLDURAS = {
+  modelos: [
+    { id: 'tocom', nome: '#TO COM LEITE', formatos: ['post'] },
+    { id: 'classico', nome: 'Clássico', formatos: ['post'] }
+  ],
+  formatos: {
+    post: { nome: 'Post (quadrado)', largura: 1080, altura: 1080 },
+    story: { nome: 'Story (vertical)', largura: 1080, altura: 1920 }
+  }
+}
+
 // Pagina de links da campanha — fica em /links
 export const PAGINA_LINKS = {
   subtitulo: 'Conecte-se comigo!',

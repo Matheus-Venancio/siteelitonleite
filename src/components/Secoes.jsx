@@ -251,6 +251,31 @@ export function Redes() {
   )
 }
 
+/* -------------------------------------------------------- MOLDURA */
+export function ChamadaMoldura() {
+  return (
+    <section className="section moldura-cta" id="moldura">
+      <div className="container moldura-cta__inner reveal">
+        <div className="moldura-cta__texto">
+          <span className="eyebrow on-dark">Campanha de apoio</span>
+          <h2 className="h-sec">Coloque a sua cara na campanha</h2>
+          <p className="lead on-dark">
+            Monte a sua foto de apoio em 3 passos e publique nas suas redes.
+            Sua foto não sai do seu aparelho — a montagem acontece no seu
+            próprio celular.
+          </p>
+          <a href="/moldura" className="btn btn--amarelo">
+            Montar a minha foto <Arrow />
+          </a>
+        </div>
+        <div className="moldura-cta__arte" aria-hidden="true">
+          <img src="/moldura/tocom-post.png" alt="" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  )
+}
+
 /* ------------------------------------------------------------ CTA */
 export function CTA({ zapLink }) {
   return (

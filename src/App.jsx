@@ -1,9 +1,10 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import {
-  Faixa, Sobre, Bandeiras, Numero, Propostas, Galeria, Redes, CTA, Footer, BotaoZap
+  Faixa, Sobre, Bandeiras, Numero, Propostas, Galeria, ChamadaMoldura, Redes, CTA, Footer, BotaoZap
 } from './components/Secoes'
 import LinksPage from './components/LinksPage'
+import MolduraPage from './components/MolduraPage'
 import useReveal from './useReveal'
 import { CONTATO } from './site.config'
 
@@ -18,6 +19,7 @@ export default function App() {
   const rota = window.location.pathname.replace(/\/+$/, '').toLowerCase()
   const host = window.location.hostname.toLowerCase()
   if (rota === '/links' || host.startsWith('links.')) return <LinksPage />
+  if (rota === '/moldura' || host.startsWith('moldura.')) return <MolduraPage />
 
   const zapLink =
     `https://wa.me/${CONTATO.whatsapp}?text=${encodeURIComponent(CONTATO.mensagemWhatsapp)}`
@@ -33,6 +35,7 @@ export default function App() {
         <Numero />
         <Propostas />
         <Galeria />
+        <ChamadaMoldura />
         <Redes />
         <CTA zapLink={zapLink} />
       </main>

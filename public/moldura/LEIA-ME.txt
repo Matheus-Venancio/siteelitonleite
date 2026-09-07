@@ -1,0 +1,54 @@
+ARTES DO GERADOR DE MOLDURA  (pagina /moldura)
+
+Aqui ficam as artes oficiais que o site coloca POR CIMA da foto do apoiador.
+
+
+NOME DOS ARQUIVOS
+-----------------
+O nome segue sempre:   <modelo>-<formato>.png
+
+  classico-post.png     1080 x 1080   (feed / quadrado)
+  classico-story.png    1080 x 1920   (story / vertical)   << FALTA
+  tocom-post.png        1080 x 1080   (feed / quadrado)
+  tocom-story.png       1080 x 1920   (story / vertical)   << FALTA
+
+Os arquivos marcados com << FALTA ainda nao existem. Enquanto nao existirem,
+o formato "Story" nao aparece para aquele modelo.
+
+
+REGRA MAIS IMPORTANTE: A AREA DA FOTO PRECISA SER TRANSPARENTE
+---------------------------------------------------------------
+A foto do apoiador e desenhada PRIMEIRO e a arte vem POR CIMA. Entao todo o
+espaco onde a foto deve aparecer precisa estar VAZIO no PNG — transparente
+de verdade (alpha 0), nao branco.
+
+Se exportar com fundo branco, a foto do apoiador fica escondida atras da arte.
+
+No Photoshop / Illustrator / Canva: desligue a camada de fundo e exporte como
+"PNG com fundo transparente" (no Canva: Baixar > PNG > marcar "Fundo
+transparente").
+
+Para conferir se ficou certo, abra o PNG e veja se aparece o xadrez cinza na
+area da foto.
+
+
+COMO ADICIONAR UM MODELO NOVO
+-----------------------------
+1. Salve a arte aqui com o nome  <modelo>-post.png  (e -story.png se tiver).
+2. Abra  src/site.config.js  e acrescente uma linha em MOLDURAS.modelos:
+
+     { id: 'novomodelo', nome: 'Nome que aparece no botao', formatos: ['post'] }
+
+Nao precisa mexer em mais nada — nenhuma logica de desenho muda.
+
+
+COMO SUBSTITUIR UMA ARTE
+------------------------
+Basta salvar por cima, com o mesmo nome. Se a troca nao aparecer no navegador,
+force o recarregamento (Ctrl+F5) para limpar o cache.
+
+
+OBSERVACAO
+----------
+A foto do apoiador nunca sai do aparelho dele: a montagem acontece toda no
+navegador, com <canvas>. Nao existe upload, servidor nem armazenamento.
